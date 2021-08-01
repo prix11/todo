@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import './styles.css';
+import { Button } from '@material-ui/core';
+
 
 export default class ClassComp extends Component {
    constructor(props) {
@@ -24,8 +27,18 @@ export default class ClassComp extends Component {
     })
    }
     render() {
+        const styles = {
+            
+        }
         return (
          <div>
+             <h1 className="hello">Hello World</h1>
+             <Button variant="contained" color="primary">
+  Primary
+</Button>
+<Button variant="contained" color="secondary">
+  Secondary
+</Button>
              <form onSubmit={this.handleSubmit}>
                  <input value={this.state.input} onChange={this.handleChange}></input>
                  <button type="submit">Submit</button>
